@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Team() {
   return (
@@ -8,9 +9,8 @@ export default function Team() {
         <div className="flex flex-col text-center w-full mb-20">
           <h1 className="text-3xl font-bold title-font mb-4 text-gray-900"> MEET OUR TEAM </h1>
           <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
-          Problem trying to resolve the conflict between <br />
-          the two major realms of  classic physics: 
-          Newtonian mechanics.
+            Problem trying to resolve the conflict between <br />
+            the two major realms of classic physics: Newtonian mechanics.
           </p>
         </div>
 
@@ -19,11 +19,15 @@ export default function Team() {
           {/* First Team Member */}
           <div className="p-4 lg:w-1/3 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
-              <img
-                alt="team"
-                className="flex-shrink-0 rounded-lg w-[316px] h-[231px] object-cover object-center mb-4"
-                src="/team-1.jpg"
-              />
+              <div className="flex-shrink-0 rounded-lg w-[316px] h-[231px] object-cover object-center mb-4">
+                <Image
+                  alt="team"
+                  src="/team-1.jpg"
+                  width={316}
+                  height={231}
+                  className="object-cover object-center"
+                />
+              </div>
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">User</h2>
                 <h3 className="text-gray-500 mb-3">Professions</h3>
@@ -51,14 +55,18 @@ export default function Team() {
           {/* Second Team Member */}
           <div className="p-4 lg:w-1/3 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
-              <img
-                alt="team"
-                className="flex-shrink-0 rounded-lg w-[316px] h-[231px]  object-cover object-center mb-4"
-                src="/team-2.jpg"
-              />
+              <div className="flex-shrink-0 rounded-lg w-[316px] h-[231px] object-cover object-center mb-4">
+                <Image
+                  alt="team"
+                  src="/team-2.jpg"
+                  width={316}
+                  height={231}
+                  className="object-cover object-center"
+                />
+              </div>
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">User</h2>
-                <h3 className="text-gray-500 mb-3">Prefession</h3>
+                <h3 className="text-gray-500 mb-3">Profession</h3>
                 <span className="inline-flex">
                   <a className="text-sky-700">
                     <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" className="w-5 h-5" viewBox="0 0 24 24">
@@ -83,11 +91,15 @@ export default function Team() {
           {/* Third Team Member */}
           <div className="p-4 lg:w-1/3 md:w-1/2">
             <div className="h-full flex flex-col items-center text-center">
-              <img
-                alt="team"
-                className="flex-shrink-0 rounded-lg w-[316px] h-[231px]  object-cover object-center mb-4"
-                src="/team-3.jpg"
-              />
+              <div className="flex-shrink-0 rounded-lg w-[316px] h-[231px] object-cover object-center mb-4">
+                <Image
+                  alt="team"
+                  src="/team-3.jpg"
+                  width={316}
+                  height={231}
+                  className="object-cover object-center"
+                />
+              </div>
               <div className="w-full">
                 <h2 className="title-font font-medium text-lg text-gray-900">User</h2>
                 <h3 className="text-gray-500 mb-3">Profession</h3>
@@ -114,6 +126,5 @@ export default function Team() {
         </div>
       </div>
     </section>
-    
   );
 }

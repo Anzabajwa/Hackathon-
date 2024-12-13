@@ -1,5 +1,6 @@
-"use client"
+"use client";
 import { useState } from "react";
+import Image from "next/image"; // Import Image from next/image
 
 export default function Shop() {
   const items = [
@@ -88,20 +89,20 @@ export default function Shop() {
       colors: ["#ff0000", "#00ff00"],
     },
   ];
-    // Pagination Logic
-    const itemsPerPage = 12; // Number of items per page
-    const [currentPage, setCurrentPage] = useState(1);
-  
-    const totalPages = Math.ceil(items.length / itemsPerPage);
-  
-    const paginatedItems = items.slice(
-      (currentPage - 1) * itemsPerPage,
-      currentPage * itemsPerPage
-    );
-    const handlePageChange = (page: number) => {
-      setCurrentPage(page);
-    };
-  
+
+  // Pagination Logic
+  const itemsPerPage = 12; // Number of items per page
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(items.length / itemsPerPage);
+
+  const paginatedItems = items.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page);
+  };
 
   return (
     <>
@@ -113,9 +114,11 @@ export default function Shop() {
             className="rounded-lg text-center w-[240px] h-[488px] transition-transform duration-300 hover:scale-105"
           >
             {/* Product Image */}
-            <img
+            <Image
               src={item.image}
               alt={item.title}
+              width={240}  // Width of the image
+              height={300} // Height of the image
               className="w-full h-[300px] mb-4 object-contain"
             />
             {/* Product Info */}
@@ -183,7 +186,6 @@ export default function Shop() {
           3
         </button>
         <button
-        
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
           className={`px-4 py-2 border rounded ${
@@ -192,9 +194,7 @@ export default function Shop() {
               : "text-blue-500 hover:bg-gray-100"
           }`}
         >
-          <a href="/sellProduct">
-          Next
-          </a>
+          <a href="/sellProduct">Next</a>
         </button>
       </div>
     </>

@@ -1,6 +1,7 @@
 import React from "react";
 import { CiAlarmOn } from "react-icons/ci";
 import { LiaCommentSolid } from "react-icons/lia";
+import Image from 'next/image';  // Import Image component from Next.js
 
 const BlogDesign = () => {
   const posts = [
@@ -54,10 +55,13 @@ const BlogDesign = () => {
             style={{ width: "328px", height: "606px" }} // Set the box width and height
           >
             <div className="relative">
-              <img
+              {/* Use Next.js Image component for optimized image rendering */}
+              <Image
                 src={post.image}
                 alt={post.title}
                 className="w-full h-[300px] object-cover" // Adjusted image size for box fit
+                width={328} // Specify width
+                height={300} // Specify height
               />
               <span className="absolute top-3 left-3 bg-red-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                 NEW

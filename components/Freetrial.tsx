@@ -3,7 +3,7 @@ import { AiFillTwitterCircle } from "react-icons/ai";
 import { FaFacebook } from "react-icons/fa";
 import { RiInstagramFill } from "react-icons/ri";
 import { FaLinkedin } from "react-icons/fa6";
-import Footerpage from "@/components/Footerpage"
+import Footer from "@/components/Footer"
 
 
 
@@ -43,7 +43,7 @@ export default function SocialMediaSection() {
         </a>
       </div>
     </div>
-    <Footerpage />
+    <Footer />
     </>
   );
 }

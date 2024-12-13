@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 export default function Shop() {
   const items = [
@@ -76,13 +77,13 @@ export default function Shop() {
         {items.slice(0, 4).map((item, index) => (
           <div
             key={index}
-            className="  rounded-lg text-center w-[238px] h-[615px] "
+            className="rounded-lg text-center w-[238px] h-[615px]"
           >
             {/* Product Image */}
-            <img
+            <Image
               src={item.image}
               alt={item.title}
-              className="w-[242px] h-[400px]  mb-4 "
+              className="w-[242px] h-[400px] mb-4"
               width={242}
               height={400}
             />
@@ -114,13 +115,13 @@ export default function Shop() {
         {items.slice(4, 8).map((item, index) => (
           <div
             key={index}
-             className="  rounded-lg text-center w-[238px] h-[615px]  "
+            className="rounded-lg text-center w-[238px] h-[615px]"
           >
             {/* Product Image */}
-            <img
+            <Image
               src={item.image}
               alt={item.title}
-              className="w-[242px] h-[400px]  mb-4 "
+              className="w-[242px] h-[400px] mb-4"
               width={242}
               height={400}
             />

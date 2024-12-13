@@ -1,14 +1,13 @@
-"use client"
 import Head from "next/head";
-import Navbar from "../components/Navbar";
-import Hero2 from "../components/Hero2";
-import Header from "@/components/Header";
-import EditorsPick from "@/components/EditorPicks";
-import BestSeller from "@/components/BestSeller";
-import Crasual from "@/components/Crasual";
-import BlogDesign from "@/components/BlogDesign";
-import Footerpage from "@/components/Footerpage";
-import Link from "next/link";
+import Navbar from "../components/Navbar"; // Ensure the path is correct
+import Hero2 from "../components/Hero2"; // Ensure the path is correct
+import Header from "@/components/Header"; // Ensure the path is correct
+import EditorsPick from "@/components/EditorPicks"; // Ensure the path is correct
+import BestSeller from "@/components/BestSeller"; // Ensure the path is correct
+import Crasual from "@/components/Crasual"; // Ensure the path is correct
+import BlogDesign from "@/components/BlogDesign"; // Ensure the path is correct
+import Footer from "@/components/Footer"; // Ensure the path is correct
+
 export default function Home() {
   return (
     <>
@@ -18,16 +17,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Navbar />
-        <Header />
-        <Hero2 />
-        <EditorsPick />
-        <BestSeller />
-        <Crasual />
-        <BlogDesign />
-        <Footerpage />
-
-      
+      {/* Main Content */}
+      <Navbar />
+      <Header />
+      <Hero2 />
+      <EditorsPick />
+      <BestSeller />
+      <Crasual />
+      <BlogDesign />
+      <Footer />
     </>
   );
 }

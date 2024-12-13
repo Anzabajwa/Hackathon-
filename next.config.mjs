@@ -1,4 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
+import nextConfig from './next.config.mjs'; // This would be incorrect if you're using default export in .mjs file
 
-export default nextConfig;
+// Correct usage for exporting from a .mjs file
+export default {
+    reactStrictMode: true,
+    images: {
+      domains: ['example.com'],
+    },
+  };
+  

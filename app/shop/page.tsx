@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import Navbar from "@/components/Navbar";
 import Shop from "@/components/Shop";
 import Brand from "@/components/Brand"
-import Footer from "@/components/Footerpage";
+import Footer from "@/components/Footer";
 import Products from "@/components/Products"
 export default function ShopPage() {
     return (

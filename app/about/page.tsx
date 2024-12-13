@@ -13,7 +13,7 @@ export default function Hero2() {
     </a>
     <nav className="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
       <a  href="/"className="mr-5 hover:text-gray-900">Home</a>
-      <a href='/product' className="mr-5 hover:text-gray-900">Product</a>
+      <a href='/Team' className="mr-5 hover:text-gray-900">Team</a>
       <a href='/pricing' className="mr-5 hover:text-gray-900">Pricing</a>
       <a href='/contact' className="mr-5 hover:text-gray-900">Contact</a>
     </nav>

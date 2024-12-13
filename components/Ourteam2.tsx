@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image'; // Import the Image component
 
 export default function Team() {
   return (
@@ -18,11 +19,13 @@ export default function Team() {
           {[...Array(9)].map((_, index) => (
             <div className="p-4 lg:w-1/3 md:w-1/2" key={index}>
               <div className="h-full flex flex-col items-center text-center">
-                {/* Update image source dynamically */}
-                <img
+                {/* Update image source dynamically using Image component */}
+                <Image
                   alt="team"
-                  className="flex-shrink-0 rounded-lg w-[316px] h-[231px] object-cover object-center mb-4"
+                  className="flex-shrink-0 rounded-lg object-cover object-center mb-4"
                   src={`/team-${index + 1}-.jpg`} // Use team-1.jpg to team-9.jpg
+                  width={316}  // Set the width of the image
+                  height={231} // Set the height of the image
                 />
                 <div className="w-full">
                   <h2 className="title-font font-medium text-lg text-gray-900">User {index + 1}</h2>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Shop() {
   const items = [
@@ -20,22 +21,25 @@ export default function Shop() {
       <h1 className="text-4xl font-bold mb-6">Shop</h1>
 
       {/* Grid of items */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         {items.map((item, index) => (
           <div
             key={index}
             className="relative overflow-hidden rounded-lg shadow-lg"
           >
             {/* Background Image */}
-            <img
+            <Image
               src={item.image}
               alt={item.title}
-              className="w-full h-64 object-cover"
+              layout="responsive"
+              width={300} // Adjust the width to your preference
+              height={400} // Adjust the height to your preference
+              className="rounded-lg"
             />
             {/* Overlay - Always Visible */}
-            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center transform ">
+            <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center transform">
               <h2 className="text-white text-lg font-bold">{item.title}</h2>
-              <p className="text-white ">{item.count} Items</p>
+              <p className="text-white">{item.count} Items</p>
             </div>
           </div>
         ))}
